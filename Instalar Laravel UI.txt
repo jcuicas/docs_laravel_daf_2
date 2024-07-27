@@ -1,0 +1,49 @@
+==============================================================
+Cómo utilizar la autenticación de UI de Laravel en Laravel 11
+==============================================================
+
+1.- composer create-project laravel/laravel example-app
+
+2.- composer require laravel/ui
+
+3.- php artisan ui bootstrap
+
+4.- php artisan ui bootstrap --auth
+
+5.- npm install
+
+6.- npm run dev
+
+7.- php artisan serve
+
+8.- Cambiar a idioma español
+	
+	php artisan lang:publish | Este comando nos crea la carpeta lang
+	
+9.- Buscamos el archivo .env la variable de entorno: APP_LOCALE=es
+
+10.- Dentro de la carpeta lang creamos la carpeta es
+ 
+11.- Instalar los archivos del idioma español. Ir a la web:
+
+	https://laravel-lang.com/packages-lang.html
+	
+	Ejecutar los comandos:
+		
+		composer require --dev laravel-lang/lang
+		
+		php artisan lang:update
+		
+12.- Crear un nuevo usuario:
+
+	php artisan tinker
+	
+	$user = new \App\Models\User
+	
+	$user->name = 'José Cuicas'
+	
+	$user->email = 'josecuicas@gmail.com'
+	
+	$user->password = 'demo123'
+	
+	$user->save()

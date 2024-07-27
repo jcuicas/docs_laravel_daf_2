@@ -1,0 +1,23 @@
+================================================
+Pasos para crear proyecto de APIs en Laravel 11
+================================================
+
+1.- composer create-project laravel/laravel example-app
+
+2.- Configurar con cual base de datos va ha conectar
+	en el archivo .env
+	
+3.- Ejecutar el comando: php artisan migrate
+
+4.- Ejecutar el comando: php artisan install:api
+
+5.- En el Model User.php agregar el trait HasApiTokens
+
+	use Laravel\Sanctum\HasApiTokens;
+	
+6.- php artisan serve
+
+
+Nota: para instalar paquetes en laravel usa la siguiente web:
+		
+	https://packagist.org/
